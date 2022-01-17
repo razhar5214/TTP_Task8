@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
 .App-logo {
@@ -36,5 +37,23 @@
     transform: rotate(360deg);
   }
 }
+td, tr {
+  border: 1px black solid;
+  padding: 20px;
+}
 
-
+.display_row_col{
+  display: flex;
+  width: 500px;
+  margin:auto;
+  padding-left: 330px;
+  margin-top: 20px;
+}
+.display_row_col > p{
+  padding-right: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#my-table{
+  margin-top: 40px;
+}
