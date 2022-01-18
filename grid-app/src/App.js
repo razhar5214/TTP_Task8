@@ -59,7 +59,7 @@ class App extends React.Component {
         <Navbar />
         <div className="btn--container">
           <button className="nav--btn" onClick={this.addRow}>Add Row</button>
-          <button className="nav--btn" onClick={this.addColumn}> Add Column</button>
+          <button className="nav--btn" onClick={this.addColumn}>Add Column</button>
           <input className="color--picker" type="color" value="#FF0000" />
           <div className="display_row_col">
             <p>Rows: {this.state.row}</p>
