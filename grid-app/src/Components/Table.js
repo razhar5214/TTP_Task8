@@ -2,16 +2,18 @@ import React from "react";
 import { ReactDOM } from "react";
 import TableRow from "./TableRow"
 
-class Table extends React.Component {
-    constructor(props) {
-        super(props);
+export default function Table(props) {
+    let row = props.state.row
+    let column = props.state.column
+    const grid = []
+
+    for (let i = 0; i < row; i++) {
+        grid.push(<TableRow column={column}></TableRow>)
     }
 
-    render() {
-        return (
-            <TableRow/>
-        )
-    }
+    return (
+        <div className="grid">
+            {grid}
+        </div>
+    )
 }
-
-export default Table;

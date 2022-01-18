@@ -1,3 +1,23 @@
+.colorPick {
+  padding-top: 20px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
   padding: 20px;
