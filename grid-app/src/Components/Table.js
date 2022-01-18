@@ -3,12 +3,13 @@ import { ReactDOM } from "react";
 import TableRow from "./TableRow"
 
 export default function Table(props) {
-    let row = props.state.row
-    let column = props.state.column
+    const row = props.state.row
+    const column = props.state.column
+    const color = props.state.color
     const grid = []
 
     for (let i = 0; i < row; i++) {
-        grid.push(<TableRow column={column}></TableRow>)
+        grid.push(<TableRow column={column} color={color}></TableRow>)
     }
 
     return (

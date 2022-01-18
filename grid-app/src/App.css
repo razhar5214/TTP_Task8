@@ -1,3 +1,13 @@
+.btn--container {
+  background-color: #213c72;
+  border-radius: 20px;
+  width: fit-content;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
 .colorPick {
   padding-top: 20px;
 }
@@ -21,6 +31,7 @@
 .App {
   text-align: center;
   padding: 20px;
+  color: rgb(241, 100, 100);
 }
 
 .App-logo {

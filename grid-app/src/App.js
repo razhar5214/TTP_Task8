@@ -13,6 +13,12 @@ class App extends React.Component {
       row: 1,
       column: 1
     }
+    this.addRow = this.addRow.bind(this)
+    this.addColumn = this.addColumn.bind(this)
+    this.removeRow = this.removeRow.bind(this)
+    this.removeColumn = this.removeColumn.bind(this)
+    this.changeColor = this.changeColor.bind(this)
+
   }
 
   addRow = () => {
@@ -24,12 +30,17 @@ class App extends React.Component {
   }
 
   removeRow = () => {
+    if (this.state.row <= 1) {
+      this.setState({row: 1, column: 1})
+      return
+    }
     this.setState({ row: this.state.row - 1 });
   }
 
   removeColumn = () => {
-    if (this.state.column === 0) {
-      this.setState({ row: this.state.row - this.state.row });
+    if (this.state.column <= 1) {
+      this.setState({row: 1, column: 1})
+      return
     }
     this.setState({ column: this.state.column - 1 });
   }
@@ -41,8 +52,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>GRIDS</h1>
         <div className="btn--container">
+          <h1>GRIDS</h1>
           <button className="nav--btn" onClick={this.addRow}>Add Row</button>
           <button className="nav--btn" onClick={this.addColumn}>Add Column</button>
           <button className="nav--btn" onClick={this.removeRow}>Remove Row</button>
@@ -50,7 +61,7 @@ class App extends React.Component {
 
           <div className="colorPick">
             <label> Select Color: </label>
-            <select onChange={this.changeColor}>
+            <select onClick={this.changeColor}>
               <option value="transparent">Clear</option>
               <option value="red">Red</option>
               <option value="yellow">Yellow</option>
@@ -70,7 +81,7 @@ class App extends React.Component {
 
         <div>
           <Table
-            state={this.state}>
+            state={this.state} color={this.changeColor}>
           </Table>
         </div>
       </div>
