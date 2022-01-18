@@ -24,7 +24,7 @@ export default function TableCell(props) {
     const [color, setColor] = useState("transparent")
 
     const changeColor = () => {
-        setColor(color = props.color)
+        setColor(props.color)
     }
 
     return(

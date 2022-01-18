@@ -31,7 +31,7 @@ class App extends React.Component {
 
   removeRow = () => {
     if (this.state.row <= 1) {
-      this.setState({row: 1, column: 1})
+      this.setState({ color: "white", row: 1, column: 1 })
       return
     }
     this.setState({ row: this.state.row - 1 });
@@ -39,7 +39,7 @@ class App extends React.Component {
 
   removeColumn = () => {
     if (this.state.column <= 1) {
-      this.setState({row: 1, column: 1})
+      this.setState({ color: "white", row: 1, column: 1 })
       return
     }
     this.setState({ column: this.state.column - 1 });
@@ -61,7 +61,7 @@ class App extends React.Component {
 
           <div className="colorPick">
             <label> Select Color: </label>
-            <select onClick={this.changeColor}>
+            <select onChange={this.changeColor}>
               <option value="transparent">Clear</option>
               <option value="red">Red</option>
               <option value="yellow">Yellow</option>
