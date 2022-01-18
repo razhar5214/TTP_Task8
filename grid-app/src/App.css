@@ -1,5 +1,37 @@
+.btn--container {
+  background-color: #213c72;
+  border-radius: 20px;
+  width: fit-content;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.colorPick {
+  padding-top: 20px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
+  color: rgb(241, 100, 100);
 }
 
 .App-logo {
@@ -36,5 +68,23 @@
     transform: rotate(360deg);
   }
 }
+td, tr {
+  border: 1px black solid;
+  padding: 20px;
+}
 
-
+.display_row_col{
+  display: flex;
+  width: 500px;
+  margin:auto;
+  padding-left: 330px;
+  margin-top: 20px;
+}
+.display_row_col > p{
+  padding-right: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#my-table{
+  margin-top: 40px;
+}

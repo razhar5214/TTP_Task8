@@ -1,7 +1,11 @@
+h1 {
+    text-align: center;
+}
+
 .navbar{
     background-color: blueviolet;
-    height: 130px;
     display: flex;
+    text-align: center;
 }
 .btn--container{
     background-color: chartreuse;
